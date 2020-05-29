@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit goole sheet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        #status-area {
+            margin-top: 30px;
+        }
+        
+        .flash_message {
+            color: green;
+            background-color: aliceblue;
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="cform" target="_self" onsubmit="return postToGoogle();" action="">
+            <h1>Register</h1>
+            <div class="form-group">
+                <input id="name" class="form-control" type="text" placeholder="Họ và tên" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <input id="email" class="form-control" type="text" placeholder="Email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <input id="phone" class="form-control" type="text" placeholder="Số điện thoại" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <select id="city" class="form-control">
+                    <option value="-1">Tỉnh/ Thành phố</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select id="district" class="form-control">
+                    <option value="-1">Quận/ Huyện</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select id="ward" class="form-control">
+                    <option value="-1">Phường/ Xã</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input id="address" class="form-control" type="text" placeholder="Nhập địa chỉ cụ thể" name="address" required>
+            </div>
+
+            <button id="send" type="submit" class="btn btn-primary">Đăng ký</button>
+            <div id="status-area"></div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
